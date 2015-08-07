@@ -167,13 +167,13 @@ responsive design tweaks!
 */
 
 /* team page */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 40.063em) {
 	.team-member-name {
       margin-top:10px;
   }
 }
 
-@media only screen and (max-width: 670px){
+@media only screen and (max-width: 64.063em){
 	.team-member-name{
 		margin-top: 10px;
 	}
@@ -208,6 +208,7 @@ responsive design tweaks!
 		margin-left: 0 !important;
 	}
 }
+
 
 .blog-top-header h1 {
 	text-align: center !important;

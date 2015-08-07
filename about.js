@@ -1,5 +1,5 @@
 (function ($){
-  var BREAKPOINT = 670;
+  var BREAKPOINT = 642;
   var swappedDivs = false;
 
   function updateColumns() {
