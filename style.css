@@ -1,0 +1,248 @@
+/*
+	Theme Name: Notio Child Theme
+	Theme URI: http://themeforest.net/user/fuelthemes
+	Description: <strong>A Premium theme for magazine, editor, community and more! WordPress Theme by <a href="http://www.themeforest.net/user/fuelthemes">fuelthemes</a></strong> – Update notifications available on Twitter and Themeforest <a href="http://twitter.com/anteksiler">Follow us on twitter</a> – <a href="http://themeforest.net/user/fuelthemes">Follow us on Themeforest</a>
+	Version: 1.0.0
+	Author: fuelthemes
+	Template: notio-wp
+*/
+
+@import url("../notio-wp/style.css");
+
+
+.mc4wp-form input[type = 'text'], .mc4wp-form input[type = 'email'] {
+	letter-spacing: 0;
+	border:0;
+	border-bottom: 3px solid #dcdcdc;
+	padding-left: 5px;
+	color: rgb(107,107,107);
+	font-size: 11px;
+	font-family: 'Gotham SSm A';
+	font-weight: normal;
+	margin-bottom: 0;
+	padding-bottom: 10px;
+}
+
+/* removed unnecessary labels for new design */
+#mc4wp-form-1 form p label {
+	display: none;
+}
+
+/* subheader for mailchimp area */
+.mailchimp-subscribe-byline p {
+	font-size: 11px !important;
+}
+
+/* turn off the border for the submit button */
+#mc4wp-form-1 form input[type = 'submit'] {
+	border:0;
+	font-size: 11px;
+	letter-spacing: 1px;
+}
+
+/* turns off the hover effects for the submit button */
+#mc4wp-form-1 form input[type = 'submit']:hover {
+	background:none;
+	border:0;
+	color: black;
+
+}
+
+/* dots for the home page header */
+.header-dots {
+	font-family: 'Georgia';
+	font-size: 15px;
+	color: #d2d2d2;
+	max-width: 100%;
+	letter-spacing: 2px;
+	overflow: hidden;
+}
+
+/* blog subheader */
+.blog-subheader {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.blog-subheader > img {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.blog-subheader-title {
+	text-align: center;
+	font-family: "Gotham SSm A", "Gotham SSm B";
+	font-weight: 300;
+	letter-spacing: 1px;
+	display: block;
+}
+
+/* add in the correct font to the appropriate blog areas */
+.blog-section article .post-meta.cf ul li, .blog-section article .more-link {
+	font-family:'Gotham SSm A';
+}
+
+/* portfolio text fix */
+.thb-portfolio article .overlay h4 {
+	font-family: 'Gotham SSm A';
+	margin-bottom: 0;
+	color: #fff !important;
+	line-height: 20px !important;
+}
+
+/* added a fix for side scrolling when the blog items are still loading */
+.blog-section {
+	overflow: hidden;
+}
+
+.blog_nav {
+	border-top: 0;
+}
+
+.blog_nav .next {
+	text-align: right;
+	padding-right: 50px;
+	font-size: 12px;
+	color: #000;
+	letter-spacing: 2px;
+	padding-top: 10px;
+	border-right: 0;
+}
+
+.blog_nav .prev {
+	text-align: left;
+	padding-left: 50px;
+	font-size: 12px;
+	color: #000;
+	letter-spacing: 2px;
+	padding-top: 10px;
+}
+
+.blog-subheader-image {
+	width: 230px;
+}
+
+/* resize social links here */
+.social-links i {
+	font-size: 25px;
+}
+
+#menu-footer-menu {
+	display: inline-block !important;
+	vertical-align: top;
+	margin-top: -5px !important;
+}
+
+#menu-footer-menu a {
+	font-size: 14px;
+  font-family: "Gotham SSm A";
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 20px !important;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.298039);
+
+}
+
+#footer {
+	padding-bottom: 0;
+}
+
+/* masonry plugin fix for white lines */
+.masonry-container > div {
+	overflow: hidden;
+}
+.thb-portfolio.masonry.row {
+	margin-right: -2px;
+}
+
+/*
+-------------------------
+responsive design tweaks!
+-------------------------
+*/
+
+/* team page */
+@media only screen and (max-width: 480px) {
+	.team-member-name {
+      margin-top:10px;
+  }
+}
+
+@media only screen and (max-width: 670px){
+	.team-member-name{
+		margin-top: 10px;
+	}
+	.team-member-name h3, .team-member-name h4 {
+		text-align: center !important;
+	}
+
+	.about-center-content {
+		text-align: center;
+	}
+
+	.about-center-content h1 {
+		font-size: 40px !important;
+		line-height: 40px !important;
+	}
+
+	.about-center-content img {
+		text-align: center;
+		display: block;
+	}
+
+	.about-clients-header, .about-services-header {
+		text-align: center;
+		margin-top: 40px;
+	}
+
+	.about-clients-ul, .about-services-ul {
+		text-align: center;
+	}
+
+	.about-right-sidebar {
+		margin-left: 0 !important;
+	}
+}
+
+.blog-top-header h1 {
+	text-align: center !important;
+}
+
+/* contact page */
+.contact-header, .contact-text p {
+	text-align: center;
+}
+
+/*
+-------------------------
+about page redesign stuff
+-------------------------
+*/
+.about-clients-header, .about-services-header {
+	margin-bottom: 20px !important;
+}
+
+.about-clients-header p, .about-services-header p {
+	color: #000 !important;
+	text-transform: uppercase;
+	font-size: 12px !important;
+	font-weight: bold !important;
+	letter-spacing: 1px !important;
+}
+
+.about-clients-ul ul, .about-services-ul ul {
+	list-style: none;
+	font-family: "Gotham SSm A", "Gotham SSm B";
+}
+
+.post .post-content .about-clients-ul ul li, .about-services-ul ul li {
+	font-size: 12px !important;
+	line-height: 16px;
+	color: rgb(107,107,107) !important;
+	margin-bottom: 8px;
+}
