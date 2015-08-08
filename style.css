@@ -190,9 +190,9 @@ responsive design tweaks!
 		line-height: 40px !important;
 	}
 
-	.about-center-content img {
-		text-align: center;
-		display: block;
+	.post .post-content .about-center-content img,
+	.post .post-content .about-right-sidebar img {
+		float: none;
 	}
 
 	.about-clients-header, .about-services-header {
@@ -209,6 +209,9 @@ responsive design tweaks!
 	}
 }
 
+.about-center-content img, .about-right-sidebar img {
+	float: left;
+}
 
 .blog-top-header h1 {
 	text-align: center !important;
