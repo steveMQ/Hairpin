@@ -9,6 +9,22 @@
 
 @import url("../notio-wp/style.css");
 
+::-webkit-input-placeholder {
+   color: rgb(107,107,107);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgb(107,107,107);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgb(107,107,107);
+}
+
+:-ms-input-placeholder {
+   color: rgb(107,107,107);
+}
+
 
 .mc4wp-form input[type = 'text'], .mc4wp-form input[type = 'email'] {
 	letter-spacing: 0;
@@ -54,7 +70,7 @@
 	font-size: 15px;
 	color: #d2d2d2;
 	max-width: 100%;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	overflow: hidden;
 }
 
@@ -171,6 +187,16 @@ responsive design tweaks!
 	.team-member-name {
       margin-top:10px;
   }
+
+	.about-clients-ul, .about-services-ul {
+		text-align: center;
+	}
+
+	.about-clients-header, .about-services-header {
+		text-align: center;
+		margin-top: 40px;
+	}
+
 }
 
 @media only screen and (max-width: 64.063em){
@@ -195,14 +221,9 @@ responsive design tweaks!
 		float: none;
 	}
 
-	.about-clients-header, .about-services-header {
-		text-align: center;
-		margin-top: 40px;
-	}
 
-	.about-clients-ul, .about-services-ul {
-		text-align: center;
-	}
+
+
 
 	.about-right-sidebar {
 		margin-left: 0 !important;
