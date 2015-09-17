@@ -1,5 +1,9 @@
 <?php
 
+  function getPostLinkText($direction) {
+    return "<i class='fa fa-chevron-$direction'></i>";
+  }
+
   function getPreviousPortfolioLink() {
     if( get_adjacent_post(false, '', true) ) {
       previous_post_link('%link', getPostLinkText('left'));

@@ -12,10 +12,6 @@
 	$meta = get_the_term_list( $post->ID, 'project-category', '<span>', '</span>, <span>', '</span>' );
 	$meta = preg_replace('/<a href=\"(.*?)\">(.*?)<\/a>/', "\\2", $meta);
 
-	function getPostLinkText($direction) {
-		return "<i class='fa fa-chevron-$direction'></i>";
-	}
-
 ?>
   <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 	<article itemscope itemtype="http://schema.org/BlogPosting" <?php post_class('post blog-post'); ?> id="post-<?php the_ID(); ?>" role="article">
