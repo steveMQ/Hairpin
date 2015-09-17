@@ -11,7 +11,7 @@
         $args = array('post_type' => 'portfolio', 'posts_per_page' => '1', 'order' => 'DESC');
         $first = new WP_Query($args);
         $first->the_post();
-        echo '<a href="' . get_permalink() . '">' . getPostLinkText('left') . '</a>';
+        echo '<a rel="prev" href="' . get_permalink() . '">' . getPostLinkIcon('left') . '</a>';
         wp_reset_query();
     };
   }
@@ -23,7 +23,7 @@
         $args = array('post_type' => 'portfolio', 'posts_per_page' => 1, 'order' => 'ASC');
         $last = new WP_Query($args);
         $last->the_post();
-        echo '<a href="' . get_permalink() . '">' . getPostLinkText('right') . '</a>';
+        echo '<a rel="next" href="' . get_permalink() . '">' . getPostLinkIcon('right') . '</a>';
         wp_reset_query();
     };
   }
