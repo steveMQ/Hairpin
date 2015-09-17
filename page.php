@@ -1,10 +1,8 @@
-<?php get_header(); ?>
-<?php if (is_front_Page()):  ?>
+<?php get_header(); thb_portfolio(array('type' => 'portfolio')); ?>
 
 <!-- import the dots! -->
 <?php get_template_part( 'partials/dots' ); ?>
 
-<?php endif; ?>
 <?php
  	if (is_page()) {
  		$id = $wp_query->get_queried_object_id();

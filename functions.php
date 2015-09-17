@@ -6,3 +6,10 @@ function register_hairpin_nav_menus() {
   	'footer' => 'Footer Menu',
   ));
 }
+
+function new_excerpt_more( $more ) {
+	return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+include( 'inc/twitter_gettweets.php' );
