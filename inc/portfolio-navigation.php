@@ -1,12 +1,12 @@
 <?php
 
-  function getPostLinkText($direction) {
+  function getPostLinkIcon($direction) {
     return "<i class='fa fa-chevron-$direction'></i>";
   }
 
-  function getPreviousPortfolioLink() {
-    if( get_previous_post(false, '') ) {
-      previous_post_link('%link', getPostLinkText('left'));
+  function previousPortfolioLink() {
+    if( get_previous_post() ) {
+      previous_post_link('%link', getPostLinkIcon('left'));
     } else {
         $args = array('post_type' => 'portfolio', 'posts_per_page' => '1', 'order' => 'DESC');
         $first = new WP_Query($args);
@@ -16,9 +16,9 @@
     };
   }
 
-  function getNextPortfolioLink() {
-    if( get_next_post(false, '') ) {
-      next_post_link('%link', getPostLinkText('right'));
+  function nextPortfolioLink() {
+    if( get_next_post() ) {
+      next_post_link('%link', getPostLinkIcon('right'));
     } else {
         $args = array('post_type' => 'portfolio', 'posts_per_page' => 1, 'order' => 'ASC');
         $last = new WP_Query($args);

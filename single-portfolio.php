@@ -23,10 +23,10 @@
 			<div class="row">
 				<div class="single-portfolio-arrows">
 					<div class="left-arrow">
-						<?php getPreviousPortfolioLink(); ?>
+						<?php previousPortfolioLink(); ?>
 					</div>
 					<div class="right-arrow">
-						<?php getNextPortfolioLink(); ?>
+						<?php nextPortfolioLink(); ?>
 					</div>
 
 				</div>
