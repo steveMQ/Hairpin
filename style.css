@@ -25,6 +25,39 @@
    color: rgb(107,107,107);
 }
 
+h1, h3 {
+  text-align: left !important;
+}
+
+.twitter_container .carousel a:hover {
+  color: inherit;
+}
+
+.left-arrow {
+  display: block;
+  float: left;
+}
+
+.right-arrow{
+  display: block;
+  float: right;
+}
+
+.left-arrow, .right-arrow {
+  width: 50%;
+}
+
+.left-arrow a, .right-arrow a {
+  padding: 35px;
+}
+
+.left-arrow a i, .right-arrow a i {
+  color: black;
+}
+
+.thb-portfolio.shortcode {
+  margin-top: 50px;
+}
 
 .mc4wp-form input[type = 'text'], .mc4wp-form input[type = 'email'] {
 	letter-spacing: 0;
@@ -33,7 +66,7 @@
 	padding-left: 5px;
 	color: rgb(107,107,107);
 	font-size: 11px;
-	font-family: 'Gotham SSm A';
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
 	font-weight: normal;
 	margin-bottom: 0;
 	padding-bottom: 10px;
@@ -44,9 +77,29 @@
 	display: none;
 }
 
+.mc4wp-alert.mc4wp-success {
+  border:0;
+  background-color: inherit;
+  color: black;
+}
+
+.mc4wp-alert {
+  color: black;
+  background-color: inherit;
+  border:0;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.team-description {
+  margin-top: 30px;
+}
+
 /* subheader for mailchimp area */
 .mailchimp-subscribe-byline p {
-	font-size: 11px !important;
+	font-size: 14px !important;
 }
 
 /* turn off the border for the submit button */
@@ -64,19 +117,23 @@
 
 }
 
+nav {
+  margin-top: 20px;
+}
+
 /* dots for the home page header */
 .header-dots {
 	font-family: 'Georgia';
-	font-size: 15px;
+	font-size: 11px;
 	color: #d2d2d2;
 	max-width: 100%;
-	letter-spacing: 1px;
+	letter-spacing: 3px;
 	overflow: hidden;
 }
 
 /* blog subheader */
 .blog-subheader {
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 	margin-top: 40px;
 }
 
@@ -86,6 +143,7 @@
 	margin-right: auto;
 	display: block;
 	margin-bottom: 20px;
+  width: 350px;
 }
 
 .blog-subheader-title {
@@ -96,17 +154,37 @@
 	display: block;
 }
 
+.blog-top-header h1 {
+  word-spacing: 5000px;
+}
+
 /* add in the correct font to the appropriate blog areas */
 .blog-section article .post-meta.cf ul li, .blog-section article .more-link {
-	font-family:'Gotham SSm A';
+	font-family:'Gotham SSm A', 'Gotham SSm B';
 }
+
+/* changes the font for the 'read more' link */
+.blog-section article .more-link {
+  font-size: 12px;
+}
+
+/* */
+.blog-section article .post-meta.cf ul li {
+  font-size: 10px;
+}
+
 
 /* portfolio text fix */
 .thb-portfolio article .overlay h4 {
-	font-family: 'Gotham SSm A';
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
 	margin-bottom: 0;
 	color: #fff !important;
 	line-height: 20px !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.thb-portfolio article .overlay span {
+  -webkit-font-smoothing: antialiased;
 }
 
 /* added a fix for side scrolling when the blog items are still loading */
@@ -137,10 +215,6 @@
 	padding-top: 10px;
 }
 
-.blog-subheader-image {
-	width: 230px;
-}
-
 /* resize social links here */
 .social-links i {
 	font-size: 25px;
@@ -154,7 +228,7 @@
 
 #menu-footer-menu a {
 	font-size: 14px;
-  font-family: "Gotham SSm A";
+  font-family: 'Gotham SSm A', 'Gotham SSm B';
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -168,6 +242,10 @@
 	padding-bottom: 0;
 }
 
+#footer .social-links a {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
 /* masonry plugin fix for white lines */
 .masonry-container > div {
 	overflow: hidden;
@@ -176,40 +254,141 @@
 	margin-right: -2px;
 }
 
+.post .post-content h1 {
+  /*font-style: inherit !important;*/
+  font-family: 'Surveyor Display A', 'Surveyor Display B';
+}
+
+.post .post-title h2 {
+  line-height: 45px !important;
+}
+
+.page .post .post-content img.center {
+  margin:0 0;
+}
+
+/*this removes the hover effect for the twitter @handle*/
+.post .post-content .twitter_container > a:hover {
+  color: inherit;
+}
+
+.team-member-name h3 {
+  font-size: 35px !important;
+  margin-bottom: 15px !important;
+}
+
+.team-member-name h4 {
+  font-size: 20px !important;
+}
+
+
+.single-portfolio-arrows {
+  margin-top: 100px;
+}
+
+
 /*
 -------------------------
 responsive design tweaks!
 -------------------------
 */
 
-/* team page */
+
+.mobile-toggle {
+  margin-top: 20px;
+}
+
+.header .logo {
+  display: block;
+}
+
 @media only screen and (max-width: 40.063em) {
-	.team-member-name {
+
+  /* this takes care of all the headers on the site! */
+  .header-tagline > div > h1,
+  .about-page-header > div > h1,
+  .blog-top-header h1,
+  .contact-header h1,
+  .post .post-title h2,
+  .post-content.single-text h1,
+  .single.single-post .columns .post-title > h1
+  {
+    font-size: 30px !important;
+    line-height: 50px !important;
+    font-family: 'Surveyor Display A', 'Surveyor Display B';
+  }
+
+  .signup-text > div > h2 > span {
+    font-family: 'Surveyor Display A', 'Surveyor Display B';
+  }
+
+  .team-member-name {
       margin-top:10px;
   }
 
-	.about-clients-ul, .about-services-ul {
-		text-align: center;
-	}
+  .team-member-name h3 {
+    font-size: 30px !important;
+  }
 
-	.about-clients-header, .about-services-header {
-		text-align: center;
-		margin-top: 40px;
-	}
+  .left-arrow, .right-arrow {
+    width: 50%;
+  }
+
+  .single-portfolio .post .post-content .columns > img {
+    margin-bottom: 40px;
+  }
+
+  .home-subheader-area .gap {
+    height: 30px !important;
+  }
+
+  .page .post .post-content img.center {
+    margin:0 auto;
+  }
 
 }
 
 @media only screen and (max-width: 64.063em){
-	.team-member-name{
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center !important;
+  }
+
+  p {
+    text-align: left !important;
+  }
+
+  .team-description p {
+	  padding-top: 15px;
+  }
+
+  .mailchimp-subscribe-byline p {
+    text-align: center !important;
+  }
+
+  .form.mc4wp-form input[type=submit] {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .team-member-name{
 		margin-top: 10px;
 	}
 	.team-member-name h3, .team-member-name h4 {
 		text-align: center !important;
 	}
 
-	.about-center-content {
+  .about-clients-ul, .about-services-ul {
 		text-align: center;
 	}
+
+	.about-clients-header, .about-services-header {
+		margin-top: 40px;
+	}
+
+  .about-clients-header p, .about-services-header p {
+    text-align: center !important;
+  }
 
 	.about-center-content h1 {
 		font-size: 40px !important;
@@ -221,27 +400,54 @@ responsive design tweaks!
 		float: none;
 	}
 
-
-
-
-
 	.about-right-sidebar {
 		margin-left: 0 !important;
 	}
+
+
+  .single.single-post .post-title > h1 {
+    font-size: 45px !important;
+    line-height: 55px !important;
+  }
+
+  .post .post-title h2 {
+    font-family: 'Surveyor Display A', 'Surveyor Display B';
+    text-align: center;
+  }
+
+  .team-description {
+    margin-top: 20px;
+  }
+
+  nav {
+    margin-top: 0px;
+  }
+
+
+
+  /* contact page */
+  .contact-header, .contact-text p {
+  	text-align: center !important;
+  }
+
+  .page .post .post-content img.center {
+    margin:0 auto;
+  }
+
 }
 
+.thb-portfolio article .overlay h4 {
+  font-style: normal !important;
+}
 .about-center-content img, .about-right-sidebar img {
 	float: left;
 }
 
 .blog-top-header h1 {
-	text-align: center !important;
+	text-align: left;
 }
 
-/* contact page */
-.contact-header, .contact-text p {
-	text-align: center;
-}
+
 
 /*
 -------------------------

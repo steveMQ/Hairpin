@@ -24,7 +24,7 @@
 					<?php get_template_part( 'inc/postformats/post-meta' ); ?>
 
 					<div class="post-content">
-						<?php echo thb_excerpt(400, '...'); ?>
+						<?php echo the_excerpt(); ?>
 					</div>
 					<a href="<?php the_permalink(); ?>" class="more-link"><?php _e( 'Read More', THB_THEME_NAME ); ?></a>
 				</div>
@@ -39,7 +39,7 @@
 
 	<!-- import the dots! -->
 	<?php get_template_part( 'partials/dots' ); ?>
-	
+
 	<?php if ( get_next_posts_link() ) : ?>
 		<a href="<?php echo next_posts(); ?>" class="next">&lt;   <?php _e( 'Older', THB_THEME_NAME ); ?></a>
 	<?php endif; ?>
