@@ -18,7 +18,7 @@
 	<div class="row">
 		<div class="small-12 medium-10 large-6 medium-centered columns">
 			<header class="post-title">
-				<h1 itemprop="headline"><?php the_title(); ?></h1>
+				<h2 itemprop="headline"><?php the_title(); ?></h2>
 			</header>
 			<?php get_template_part( 'inc/postformats/post-meta' ); ?>
 			<div class="post-content">

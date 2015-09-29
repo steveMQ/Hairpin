@@ -121,6 +121,10 @@ nav {
   margin-top: 20px;
 }
 
+.header {
+
+}
+
 /* dots for the home page header */
 .header-dots {
 	font-family: 'Georgia';
@@ -159,18 +163,16 @@ nav {
 }
 
 /* add in the correct font to the appropriate blog areas */
-.blog-section article .post-meta.cf ul li, .blog-section article .more-link {
+.blog-section article .post-meta.cf ul li, .blog-section article .more-link, .post .post-meta ul li {
 	font-family:'Gotham SSm A', 'Gotham SSm B';
-}
-
-/* changes the font for the 'read more' link */
-.blog-section article .more-link {
   font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
-/* */
-.blog-section article .post-meta.cf ul li {
-  font-size: 10px;
+
+/* tweaking the letter spacing */
+.blog-section article .post-meta.cf ul li, .post .post-meta ul li {
+  letter-spacing: 0.5px;
 }
 
 
@@ -254,13 +256,18 @@ nav {
 	margin-right: -2px;
 }
 
+.post .post-meta ul {
+  margin-bottom: 20px;
+}
+
 .post .post-content h1 {
   /*font-style: inherit !important;*/
   font-family: 'Surveyor Display A', 'Surveyor Display B';
 }
 
 .post .post-title h2 {
-  line-height: 45px !important;
+  line-height: 50px !important;
+  margin-bottom: 15px;
 }
 
 .page .post .post-content img.center {
@@ -345,6 +352,11 @@ responsive design tweaks!
   .page .post .post-content img.center {
     margin:0 auto;
   }
+
+  .post .post-meta ul li {
+    font-size: 10px;
+  }
+
 
 }
 

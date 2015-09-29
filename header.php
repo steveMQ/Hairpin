@@ -38,6 +38,7 @@
 			$header_cart = get_post_meta($id, 'header_cart', true);
 			$header_search = get_post_meta($id, 'header_search', true);
 		}
+
 		$logo = (ot_get_option('logo') ? ot_get_option('logo') : THB_THEME_ROOT. '/assets/img/logo.png');
 		$footer = ot_get_option('footer', 'on');
 	?>
@@ -99,7 +100,7 @@
 
 		<!-- Start Header -->
 		<header class="header row no-padding <?php echo $header_style; ?>" data-equal=">.columns" role="banner">
-			<div class="small-7 medium-4 columns logo<?php if ($header_style == 'style1') { ?> show-for-large-up<?php } ?>">
+			<div class="small-9 medium-6 columns logo<?php if ($header_style == 'style1') { ?> show-for-large-up<?php } ?>">
 				<?php if ($header_style == 'style2') { ?>
 					<a href="<?php echo home_url(); ?>" class="logolink">
 						<img src="<?php echo $logo; ?>" class="logoimg" alt="<?php bloginfo('name'); ?>"/>
@@ -107,7 +108,7 @@
 				<?php } ?>
 			</div>
 			<?php if ($header_style != 'style2') { ?>
-			<div class="small-7 medium-4 columns logo">
+			<div class="small-9 medium-4 columns logo">
 				<?php if ($header_style == 'style1') { ?>
 					<a href="<?php echo home_url(); ?>" class="logolink">
 						<img src="<?php echo $logo; ?>" class="logoimg" alt="<?php bloginfo('name'); ?>"/>
@@ -115,7 +116,7 @@
 				<?php } ?>
 			</div>
 			<?php } ?>
-			<div class="small-5 <?php if ($header_style == 'style2') { echo 'medium-8'; } else { echo 'medium-4';} ?> columns menu-holder">
+			<div class="small-3 <?php if ($header_style == 'style2') { echo 'medium-6'; } else { echo 'medium-4';} ?> columns menu-holder">
 				<?php $full_menu_true = ($menu_mobile_toggle_view == 'style2' && $header_style == 'style2');?>
 				<?php if ($full_menu_true) { ?>
 					<nav id="full-menu" role="navigation">
