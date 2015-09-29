@@ -27,26 +27,35 @@ if (!function_exists('get_theme_tweets')){
 							$tweets = $connection->get("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$username."&count=10") or die('Couldn\'t retrieve tweets! Wrong username?');
 
 							if(!empty($tweets->errors)){
-								if($tweets->errors[0]->message == 'Invalid or expired token'){
-									echo '<strong>'.$tweets->errors[0]->message.'!</strong><br />You will need to regenerate it <a href="https://dev.twitter.com/apps" target="_blank">here</a>!' . $after_widget;
-								}else{
-									echo '<strong>'.$tweets->errors[0]->message.'</strong>' . $after_widget;
-								}
-								return;
-							}
+								//if the cache has some content in it, display
+								 if(!empty($cacheContent)) {
+										 $tweets_array = $cacheContent['tweets'];
+								 }
+								 else {
 
-							for($i = 0;$i <= count($tweets); $i++){
-								if(!empty($tweets[$i])){
-									$tweets_array[$i]['created_at'] = $tweets[$i]->created_at;
-									$tweets_array[$i]['text'] = $tweets[$i]->text;
-									$tweets_array[$i]['status_id'] = $tweets[$i]->id_str;
-								}
+									 if($tweets->errors[0]->message == 'Invalid or expired token'){
+	 									echo '<strong>'.$tweets->errors[0]->message.'!</strong><br />You will need to regenerate it <a href="https://dev.twitter.com/apps" target="_blank">here</a>!' . $after_widget;
+	 								}
+	 								else{
+	 									echo '<strong>'.$tweets->errors[0]->message.'</strong>' . $after_widget;
+	 								}
+									return;
+								 }
 							}
-							$cacheContent = array(
-								'time' => time(),
-								'tweets' => $tweets_array
-							);
-							file_put_contents(__DIR__ . '/cache.txt', json_encode($cacheContent));
+							else {
+								for($i = 0;$i <= count($tweets); $i++){
+									if(!empty($tweets[$i])){
+										$tweets_array[$i]['created_at'] = $tweets[$i]->created_at;
+										$tweets_array[$i]['text'] = $tweets[$i]->text;
+										$tweets_array[$i]['status_id'] = $tweets[$i]->id_str;
+									}
+								}
+								$cacheContent = array(
+									'time' => time(),
+									'tweets' => $tweets_array
+								);
+								file_put_contents(__DIR__ . '/cache.txt', json_encode($cacheContent));
+							}
 						} else {
 							$tweets_array = $cacheContent['tweets'];
 						}
